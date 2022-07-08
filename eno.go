@@ -14,6 +14,8 @@ const (
 	ErrNotReady                           // операция не может быть выполнена, т.к. не готов сервер т.п.
 	ErrBadRequest                         // некорректный запрос
 	ErrDeadlineExceeded                   // закончилось отведенное время
+
+	ErrUser ErrNo = 10000 // с какого номера начинать свои собственные сообщения
 )
 
 var errDescr map[ErrNo]string = map[ErrNo]string{
