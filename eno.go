@@ -14,6 +14,10 @@ const (
 	ErrNotReady                           // операция не может быть выполнена, т.к. не готов сервер т.п.
 	ErrBadRequest                         // некорректный запрос
 	ErrDeadlineExceeded                   // закончилось отведенное время
+	ErrInvalidJSON                        // некорректные данные JSON
+	ErrInvalidData                        // некорректные данные
+	ErrFileIO                             // ошибка работы с файлами
+	ErrConnection                         // ошибка соединения
 
 	ErrUser ErrNo = 10000 // с какого номера начинать свои собственные сообщения
 )
@@ -29,6 +33,10 @@ var errDescr map[ErrNo]string = map[ErrNo]string{
 	ErrNotReady:         "ErrNotReady",
 	ErrBadRequest:       "ErrBadRequest",
 	ErrDeadlineExceeded: "ErrDeadlineExceeded",
+	ErrInvalidJSON:      "ErrInvalidJSON",
+	ErrInvalidData:      "ErrInvalidData",
+	ErrFileIO:           "ErrFileIO",
+	ErrConnection:       "ErrConnection",
 }
 
 func Name(e ErrNo) string {
